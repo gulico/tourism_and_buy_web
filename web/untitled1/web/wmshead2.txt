@@ -1,0 +1,17 @@
+﻿    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/slide.css" />
+
+    <div id="wrap">
+        <!-- 左侧菜单栏目块 -->
+        <div class="leftMeun" id="leftMeun" >
+            <div id="personInfor" >
+                <img src="images/logo.png" alt="logo" height="100" width="100">
+                <p id="userName"><%=login.getLogname()%></p>
+            </div>
+            <div class="meun-title">账号管理</div>
+            <div class="meun-item" href="userinfo.jsp" aria-controls="sour" role="tab" data-toggle="tab"><a href="userinfo.jsp"><img src="images/icon_source.png">用户管理</a></div>
+            <div class="meun-title">产品管理</div>
+            <div class="meun-item meun-item-active" href="items_information.jsp" aria-controls="scho" role="tab" data-toggle="tab"><a href="items_information.jsp"><img src="images/icon_house_grey.png">商品管理</a></div>
+            <div class="meun-item" href="WebManagementSystem.jsp" aria-controls="scho" role="tab" data-toggle="tab"><a href="WebManagementSystem.jsp"><img src="images/icon_rule_grey.png">查看报表</a></div>
+            <div style="padding-top: 200px"><a href="index.jsp"><span style="color: white">返回主页</span></a></div>
+        </div>

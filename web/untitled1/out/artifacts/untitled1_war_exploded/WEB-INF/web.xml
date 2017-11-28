@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    //
+    <servlet>
+
+        <servlet-name>register</servlet-name>
+
+        <servlet-class>classes.myservlet.control.HandleRegister</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>register</servlet-name>
+
+        <url-pattern>/helpRegister</url-pattern>
+
+    </servlet-mapping>
+    //
+    <servlet>
+
+        <servlet-name>login</servlet-name>
+
+        <servlet-class>classes.myservlet.control.HandleLogin</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>login</servlet-name>
+
+        <url-pattern>/helpLogin</url-pattern>
+
+    </servlet-mapping>
+//
+    <servlet>
+
+        <servlet-name>queryServlet</servlet-name>
+
+        <servlet-class>classes.myservlet.control.QueryALLRecord</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>queryServlet</servlet-name>
+
+        <url-pattern>/helpqueryServlet</url-pattern>
+
+    </servlet-mapping>
+    //
+    <servlet>
+
+        <servlet-name>putGoodsServlet</servlet-name>
+
+        <servlet-class>classes.myservlet.control.PutGoodToCar</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>putGoodsServlet</servlet-name>
+
+        <url-pattern>/putGoodsServlet</url-pattern>
+
+    </servlet-mapping>
+    //
+    <servlet>
+
+        <servlet-name>searchByConditionServlet</servlet-name>
+
+        <servlet-class>classes.myservlet.control.SearchByConditionServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>searchByConditionServlet</servlet-name>
+
+        <url-pattern>/searchByConditionServlet</url-pattern>
+
+    </servlet-mapping>
+
+    <servlet>
+
+        <servlet-name>advancedSearchByConditionServlet</servlet-name>
+
+        <servlet-class>classes.myservlet.control.AdvancedSearchByConditionServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>advancedSearchByConditionServlet</servlet-name>
+
+        <url-pattern>/advancedSearchByConditionServlet</url-pattern>
+
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>exit</servlet-name>
+        <servlet-class>classes.myservlet.control.HandleExit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exit</servlet-name>
+        <url-pattern>/helpExitLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteServlet</servlet-name>
+        <servlet-class>classes.myservlet.control.HandleDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteServlet</servlet-name>
+        <url-pattern>/deleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>buyServlet</servlet-name>
+        <servlet-class>classes.myservlet.control.HandleBuyGoods</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>buyServlet</servlet-name>
+        <url-pattern>/buyServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>modifyPassword</servlet-name>
+        <servlet-class>classes.myservlet.control.HandlePassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modifyPassword</servlet-name>
+        <url-pattern>/helpModifyPassword</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>usersAllRecord</servlet-name>
+        <servlet-class>classes.myservlet.control.UsersAllRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>usersAllRecord</servlet-name>
+        <url-pattern>/usersAllRecord</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>usersDelete</servlet-name>
+        <servlet-class>classes.myservlet.control.UsersDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>usersDelete</servlet-name>
+        <url-pattern>/usersDelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sevletUsersmodifyinfo</servlet-name>
+        <servlet-class>classes.myservlet.control.Usersmodifyinfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sevletUsersmodifyinfo</servlet-name>
+        <url-pattern>/sevletUsersmodifyinfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sevletUsersAdd</servlet-name>
+        <servlet-class>classes.myservlet.control.UsersAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sevletUsersAdd</servlet-name>
+        <url-pattern>/sevletUsersAdd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sevletUsersSearch</servlet-name>
+        <servlet-class>classes.myservlet.control.UsersSearch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sevletUsersSearch</servlet-name>
+        <url-pattern>/sevletUsersSearch</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>sevletGoodsAdd</servlet-name>
+        <servlet-class>classes.myservlet.control.GoodsAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sevletGoodsAdd</servlet-name>
+        <url-pattern>/sevletGoodsAdd</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DetailGoodsmodifyinfo</servlet-name>
+        <servlet-class>classes.myservlet.control.DetailGoodsmodifyinfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailGoodsmodifyinfo</servlet-name>
+        <url-pattern>/DetailGoodsmodifyinfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Goodsmodifyinfo</servlet-name>
+        <servlet-class>classes.myservlet.control.Goodsmodifyinfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Goodsmodifyinfo</servlet-name>
+        <url-pattern>/Goodsmodifyinfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sevletGoodsBaseAdd</servlet-name>
+        <servlet-class>classes.myservlet.control.GoodsBaseAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sevletGoodsBaseAdd</servlet-name>
+        <url-pattern>/sevletGoodsBaseAdd</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GoodsDelete</servlet-name>
+        <servlet-class>classes.myservlet.control.GoodsDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsDelete</servlet-name>
+        <url-pattern>/GoodsDelete</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,92 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="padding-left:100px">
+  <div class="navbar-header">
+      <img src="images/logosmall.png" style="float: left;">
+    <a class="navbar-brand" href="#">三时三餐</a>
+  </div>
+  <div>
+    <ul class="nav navbar-nav">
+    <!--导航列表-->
+    <%
+    //获取当前页面的名称
+      String   uri=request.getRequestURI();
+      uri=uri.substring(uri.lastIndexOf("/")+1);
+        if(uri.equals("index.jsp")){
+        %>
+            <li class = "active"><a href="index.jsp" >首页</a></li>
+            <li><a href="submit.jsp">留言板</a></li>
+            <li><a href="Travel_index.jsp">度假</a></li>
+        <%
+        }
+        else if(uri.equals("submit.jsp")){
+        %>
+            <li><a href="index.jsp" >首页</a></li>
+            <li class = "active"><a href="submit.jsp">留言板</a></li>
+            <li><a href="Travel_index.jsp">度假</a></li>
+        <%
+        }
+        else if(uri.equals("Travel_index.jsp")){
+        %>
+            <li><a href="index.jsp" >首页</a></li>
+            <li><a href="submit.jsp">留言板</a></li>
+            <li class = "active"><a href="Travel_index.jsp">度假</a></li>
+        <%
+        }
+        else{
+        %>
+        <li><a href="index.jsp" >首页</a></li>
+              <li><a href="submit.jsp">留言板</a></li>
+              <li><a href="Travel_index.jsp">度假</a></li>
+        <%
+        }
+
+      %>
+    </ul>
+        <%
+            boolean ok=login.getSuccess();
+            if(!ok)
+            {
+                %>
+      <ul class="nav navbar-nav navbar-right" style="padding-right:50px">
+          <!-- class glyphicon glyphicon-* 设置图标-->
+          <li><a href="register.jsp"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+          <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+      </ul>
+        <%
+            }
+            else{
+                %>
+      <ul class="nav navbar-nav navbar-right" style="padding-right:50px">
+          <!-- class glyphicon glyphicon-* 设置图标-->
+          <li><a  data-toggle="popover-x" data-target="#myPopover6a" data-placement="bottom">
+                            <span class="glyphicon glyphicon-user"></span><%=login.getLogname()%>
+                        </a></li>
+                        <%
+                        if(login.getSuccess() && login.getLogname().equals("root")){
+                              %><li><a href="WebManagementSystem.jsp"><span class="glyphicon glyphicon-cog"></span>管理</a></li>
+                              </ul><%
+                        }else{
+                        %>
+
+          <li><a href="lookShoppingCar.jsp"><span class="	glyphicon glyphicon-shopping-cart"></span>购物车</a></li>
+
+      </ul>
+      <%
+      }
+            }
+        %>
+        <!-- PopoverX content -->
+                        <div id="myPopover6a" class="popover popover-default">
+                            <div class="arrow"></div>
+                            <div class="popover-content">
+                                <p><a href="modifyPassword.jsp"><span style="color:black">修改密码</span></a></p>
+                                <p><a href="helpExitLogin"><span style="color:black">退出登录</span></a></p>
+                            </div>
+                        </div>
+  </div>
+  <script>
+  $(function (){
+      $("[data-toggle='popover']").popover();
+  });
+  </script>
+
+</nav>
